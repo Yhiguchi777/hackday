@@ -53,16 +53,7 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        imageView = (ImageView)view.findViewById(R.id.imageView);
-
-        view.findViewById(R.id.covert).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                println("l");
-            }
-        });
-
-        view.findViewById(R.id.select).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.start).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d("1","aaaaaaaaaa");
@@ -115,6 +106,8 @@ public class FirstFragment extends Fragment {
                 Uri uri = resultData.getData();
                 String path = getPathUri(this.getActivity(),uri);
                 new HttpTask().execute(path);
+
+
             }
         }
     }
